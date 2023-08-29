@@ -1,0 +1,7 @@
+<kendo-grid [data]="tableData">
+    <kendo-grid-column *ngFor="let data of tableData" [field]="data.ProductName" [title]="data.ProductName">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            {{ dataItem.ProductName }}
+        </ng-template>
+    </kendo-grid-column>
+</kendo-grid>

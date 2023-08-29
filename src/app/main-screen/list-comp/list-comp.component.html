@@ -1,0 +1,17 @@
+
+<h3>List Of Components</h3>
+<kendo-listview
+[data]="listComponent"
+[style.height.px]="280"
+[itemClass]="{ 'item-border': true }"
+>
+<ng-template  kendoListViewItemTemplate let-dataItem="dataItem">
+  <p   
+  [draggable]="true"
+  (dragstart)="onDragStart($event,dataItem)"
+  (dragover)="allowDropComponent($event)"
+  >
+    {{ dataItem.name }}
+</p>
+</ng-template>
+</kendo-listview>

@@ -8,6 +8,7 @@
 .Parent {
     display: flex;
     flex-direction: row;
+    height: 350px;
 }
 
 .right {
@@ -19,5 +20,9 @@
     width: 25%;
     padding: 5px;
     height: 100vh;
+}
+.editor{
+    height:256px;
+    position: relative;
 }
 

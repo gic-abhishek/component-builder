@@ -1,7 +1,7 @@
 export const listComponents = [
     {
     controlType:"table",
-    name:"abhush",
+    name:"Table",
     tableData:[
         {
           ProductID: 1,

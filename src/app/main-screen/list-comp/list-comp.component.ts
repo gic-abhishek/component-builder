@@ -15,7 +15,7 @@ import { DragAndDropModule } from '@progress/kendo-angular-utils';
 
 })
 export class ListCompComponent implements OnInit {
-  listComponent!: ListComponentModel[]; 
+  listComponent!: ListComponentModel[];
   constructor() { }
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class ListCompComponent implements OnInit {
 
 
   onDragStart(ev:DragEvent,data:ListComponentModel){
-    console.log('drag')
+    console.log('drag',data)
     ev.dataTransfer?.setData("transferData",JSON.stringify(data))
     // ev.stopPropagation();
   }

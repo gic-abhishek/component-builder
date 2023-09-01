@@ -40,14 +40,16 @@ export class DesignerComponent implements OnInit {
   }
 
   public handleDrop(ev: DropTargetEvent): void {
-    console.log(`drop: ${JSON.stringify(ev.dragEvent)}`);
+    // console.log(`drop: ${JSON.stringify(ev.dragEvent)}`);
   }
 
   dropComponent(ev:DragEvent){
     console.log('drop')
-    let transferData =   ev.dataTransfer?.getData("transferData")
-    console.log(JSON.parse(JSON.stringify(transferData)))
-    this.listComponents.push(transferData)
+    let transferData:any =   ev.dataTransfer?.getData("transferData")
+    // console.log(JSON.parse(transferData))
+    // console.log(JSON.parse(transferData))
+    this.listComponents.push(JSON.parse(transferData));
+    // console.log(this.listComponents)
     ev.stopPropagation();
   }
 
